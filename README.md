@@ -66,6 +66,17 @@ cargo test
 cargo clippy --all-targets -- -D warnings
 ```
 
+## CI/CD
+
+GitHub Actions runs a production-style gate on pushes and pull requests:
+
+- formatting and Clippy with warnings denied
+- locked dependency build and full test suite
+- documentation build with rustdoc warnings denied
+- dependency vulnerability audit with `cargo-audit`
+- dependency review on pull requests
+- optimized release build after quality, test, docs, and security jobs pass
+
 Start a TCP primary:
 
 ```sh
