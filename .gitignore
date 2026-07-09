@@ -1,0 +1,17 @@
+target/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.claude/
+
+# Local logs
+*.log
+*.events
